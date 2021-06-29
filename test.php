@@ -3,10 +3,6 @@
     <title>PHP TEST</title>
     <link href="style.css" rel="stylesheet">
     <style>
-	/*コメントアウト方法*/
-	/*CSS*/
-	/* //javascript */
-	/* //PHP　*/
 	body{
 		background-image: url(music.jpeg);
 		background-color:rgba(255,255,255,0.8);
