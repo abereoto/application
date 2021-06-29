@@ -3,6 +3,7 @@
     <title>PHP TEST</title>
     <link href="style.css" rel="stylesheet">
     <style>
+	/* 2021/06/24 PHP部分追加しました　by鈴木*/
 	body{
 		background-image: url(music.jpeg);
 		background-color:rgba(255,255,255,0.8);
