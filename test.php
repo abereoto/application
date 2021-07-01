@@ -4,6 +4,9 @@
 	<meta charset="utf-8">
     <link href="style.css" rel="stylesheet">
     <style>
+	html{
+		font-size: 100%;
+        }
 	/* 2021/06/24 PHP部分追加　by鈴木*/
 	body{
 		background-image: url(music.jpeg);
@@ -106,7 +109,7 @@ function writeData(){
             print('ファイルロックに失敗しました');
         }
     }
-//aaa
+
     fclose($fp);
 }
 
