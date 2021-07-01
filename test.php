@@ -106,7 +106,7 @@ function writeData(){
             print('ファイルロックに失敗しました');
         }
     }
-
+//aaa
     fclose($fp);
 }
 
