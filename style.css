@@ -1,1 +1,31 @@
 @charset "UTF-8";
+html{
+		font-size: 100%;
+        }
+	/* 2021/06/24 PHP部分追加　by鈴木*/
+	body{
+		background-image: url(music.jpeg);
+		background-color:rgba(255,255,255,0.8);
+		background-blend-mode:lighten;
+		background-size: cover;
+		background-position: center center;
+		font-family: Meiryo;
+		
+	}
+	/* keijiban.txtの中身を書き出しているタグが p */
+	p{ 
+		font-size: 20px; color: black;
+		text-align: center;
+	}
+	h1{
+		font-size: 64; color: black;
+		text-align: center;
+	}
+	div{
+		backgroud: #ffffff;
+		padding: 10px;
+		text-align: center;
+	}
+	iframe{
+		text-align: center;
+	}
