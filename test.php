@@ -109,7 +109,7 @@ function writeData(){
             print('ファイルロックに失敗しました');
         }
     }
-
+//aaaa
     fclose($fp);
 }
 
