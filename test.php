@@ -12,6 +12,7 @@
 		background-size: cover;
 		background-position: center center;
 		font-family: Meiryo;
+		
 	}
 	/* keijiban.txtの中身を書き出しているタグが p */
 	p{ 
