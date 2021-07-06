@@ -35,6 +35,7 @@ body{
 	.box1 p {
     		margin: 0;
     		padding: 0;
+		position: center;
 	}
 	div{
 		backgroud: #fff;
@@ -49,5 +50,4 @@ body{
 	.main_nav{
  		 color: blue;
 	}
-
 
