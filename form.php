@@ -1,0 +1,84 @@
+<?php
+//ファイルのパス指定
+define('FILENAME','./message.txt');
+
+date_default_timezone_set('Asia/Tokyo');
+
+// 変数の初期化
+$current_date = null;
+$data = null;
+$file_handle = null;
+$split_data = null;
+$message = array();
+$message_array = array();
+
+if(!empty($_POST['btn_submit'])){
+    if($file_handle = fopen(FILENAME,"a")){
+        //書き込み日時を取得
+        $current_date = date("Y-m-d H:i:s");
+        //書き込むデータを作成
+        $data = "'".$_POST['list_name']."','".$_POST['view_name']."','".$_POST['message']."','".$current_date."'\n";
+        //書き込み
+        fwrite( $file_handle, $data);
+
+        fclose($file_handle);
+    }
+}
+//ファイルを読み込んでHTMLに返す
+if( $file_handle = fopen( FILENAME,'r') ) {
+    while( $data = fgets($file_handle) ){
+        $split_data = preg_split( '/\'/', $data);
+
+        $message = array(
+            'list_name' => $split_data[1],
+            'view_name' => $split_data[3],
+            'message' => $split_data[5],
+            'post_date' => $split_data[7]
+        );
+        array_unshift( $message_array, $message);
+    }
+
+    // ファイルを閉じる
+    fclose( $file_handle);
+}
+?>
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <header>
+        </header>
+    <form method="post">
+    <div>
+        <label for="list_name">プレイリスト名</label>
+		<input id="list_name" type="text" name="list_name" value="">
+    </div>
+	<div>
+		<label for="view_name">投稿者名</label>
+		<input id="view_name" type="text" name="view_name" value="">
+	</div>
+	<div>
+		<label for="message">ひと言メッセージ</label>
+		<textarea id="message" name="message"></textarea>
+	</div>
+	<input type="submit" name="btn_submit" value="投稿">
+</form>
+<hr>
+<section>
+    <?php if( !empty($message_array) ): ?>
+    <?php foreach( $message_array as $value ): ?>
+    <article>
+        <div class="info">
+            <h2><?php echo $value['view_name']; ?></h2>
+            <h3><?php echo $value['list_name']; ?></h3>
+            <time><?php echo date('Y年m月d日 H:i', strtotime($value['post_date'])); ?></time>
+        </div>
+        <p><?php echo $value['message']; ?></p>
+    </article>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</section>
+    </body>
+</html>
