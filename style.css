@@ -2,30 +2,52 @@
 html{
 		font-size: 100%;
         }
-	/* 2021/06/24 PHP部分追加　by鈴木*/
-	body{
-		background-image: url(music.jpeg);
+/* 2021/06/24 PHP部分追加　by鈴木*/
+body{
+		background-image: url(https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG2ZbYGCyLpR5USnqNmgnrubG2eS9ra12f_cClqxFaU7sxwcoPdnPm7ZpA9U-1wrvo1x7ZuhdtqHsA_WGECyApPEdn_YD41hfb3bESx_i5aS3hBAhcihjgSbawZaN8SQIEhQHDQZ8AH2ii1elSltcclQX8AX3qh-9DSXgfibyHETgrtvQGdN0sJvM-MC0TacXuA2Ycm_Zx_TOBZLXvYlpOYV-rdmS-JDkd7d-jpzP83NdY_k6jY_9d0isiFV2pQ4DNuG9jG7W18-NSiKtvDCDaKEFf8pVTqvKWg0AWULTtjHBcK4_D3eMKt_6uIHYa8p4phTQQbzQ0p4caWkyaSELo94=/electoric-piano-1024x684.jpeg);
 		background-color:rgba(255,255,255,0.8);
 		background-blend-mode:lighten;
 		background-size: cover;
 		background-position: center center;
 		font-family: Meiryo;
-		
+		background-repeat: no-repeat;
+
 	}
 	/* keijiban.txtの中身を書き出しているタグが p */
-	p{ 
+	p{
 		font-size: 20px; color: black;
 		text-align: center;
 	}
 	h1{
-		font-size: 64; color: black;
+		font-size: 64px; color: #b5b5b6;
 		text-align: center;
 	}
+
+	.box1{
+    		padding: 8px 19px;
+    		margin: 2em 0;
+    		color: #fff;
+    		background: #fff;
+    		border-top: solid 5px #010000;
+    		border-bottom: solid 5px #010000;
+	}
+
+	.box1 p {
+    		margin: 0;
+    		padding: 0;
+	}
 	div{
-		backgroud: #ffffff;
+		backgroud: #fff;
 		padding: 10px;
 		text-align: center;
+
 	}
 	iframe{
 		text-align: center;
 	}
+
+	.main_nav{
+ 		 color: blue;
+	}
+
+
