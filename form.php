@@ -10,7 +10,7 @@ $data = null;
 $file_handle = null;
 $split_data = null;
 $url = null;
-$youtube_url = null;
+$youtube_url = null; //入力したurlの個別IDを格納する変数
 $message = array();
 $message_array = array();
 
