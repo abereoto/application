@@ -9,15 +9,38 @@ $current_date = null;
 $data = null;
 $file_handle = null;
 $split_data = null;
+$url = null;
+$youtube_url = null;
 $message = array();
 $message_array = array();
+
+//入力したyoutubeのURLから個別コードのみを抽出する
+if(isset($_REQUEST["url_name"]) == true)
+{
+	/** 入力内容を取得 */
+	$url = $youtube_url = $_REQUEST["url_name"];
+ 
+	$url = htmlspecialchars($url, ENT_QUOTES);
+ 
+	if (strpos($youtube_url, "watch") != false)	/* ページURL ? */
+	{
+		/** コードを変換 */
+		$youtube_url = substr($youtube_url, (strpos($youtube_url, "=")+1));
+	}
+	else
+	{
+		/** 短縮URL用を変換 */
+		$youtube_url = substr($youtube_url, (strpos($youtube_url, "youtu.be/")+9));
+	}
+
+}
 
 if(!empty($_POST['btn_submit'])){
     if($file_handle = fopen(FILENAME,"a")){
         //書き込み日時を取得
         $current_date = date("Y-m-d H:i:s");
         //書き込むデータを作成
-        $data = "'".$_POST['list_name']."','".$_POST['view_name']."','".$_POST['url_name']."','".$_POST['message']."','".$current_date."'\n";
+        $data = "'".$_POST['list_name']."','".$_POST['view_name']."','".$youtube_url."','".$_POST['message']."','".$current_date."'\n";
         //書き込み
         fwrite( $file_handle, $data);
 
@@ -89,7 +112,7 @@ if( $file_handle = fopen( FILENAME,'r') ) {
         <div class="YouTube">
             <iframe 
             width="560" height="315" 
-            src="<?php echo $value['url_name'];?>"
+            src=https://www.youtube.com/embed/<?php echo $value['url_name'];?>
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
