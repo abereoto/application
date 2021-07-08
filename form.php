@@ -86,6 +86,7 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+	<link href="CSS/style.css" rel="stylesheet">
     </head>
     <body>
     <?php if( !empty($error_message) ): ?>
@@ -97,6 +98,11 @@ if( $file_handle = fopen( FILENAME,'r') ) {
     <?php endif; ?>
         <header>
         </header>
+	    <h1>YouTubeプレイリスト掲示板</h1>
+
+            <div class="box1">
+              <p>プレイリスト作成＆投稿</p>
+            </div>
     <form method="post">
     <div>
         <label for="list_name">プレイリスト名</label>
