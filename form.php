@@ -157,7 +157,27 @@ if( $file_handle = fopen( FILENAME,'r') ) {
     height: 25px;
     background: #0086AD;
     border-radius: 100%;
+	  
+#view_name{
+    border-color: #94D6DA;
+    border-radius: 10%;
   }
+
+  #url_name{
+    border-color: #94D6DA;
+    border-radius: 10%;
+  }
+
+  #list_name{
+    border-color: #94D6DA;
+    border-radius: 10%;
+  }
+
+  #message{
+    border-color: #94D6DA;
+    border-radius: 10%;
+  }	  
+  
 </style>
 	<input id="btnen" type="submit" name="btn_submit" value="投稿">
 </form>
