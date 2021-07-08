@@ -47,16 +47,14 @@ if(!empty($_POST['btn_submit'])){
 	}
 
     if( empty($_POST['view_name']) ) {
-		$error_message[] = '投稿者名を入れてください。';
+		$clean['view_name'] = '名無しさん';
 	}else {
 		$clean['view_name'] = htmlspecialchars( $_POST['view_name'], ENT_QUOTES, 'UTF-8');
         $clean['view_name'] = preg_replace( '/\\r\\n|\\n|\\r/', '', $clean['view_name']);
 	}
 
-    if( empty($_POST['message']) ) {
-		$error_message[] = 'メッセージを入れてください。';
-	}else {
-		$clean['message'] = htmlspecialchars( $_POST['message'], ENT_QUOTES, 'UTF-8');
+    if( !empty($_POST['message']) ) {
+	$clean['message'] = htmlspecialchars( $_POST['message'], ENT_QUOTES, 'UTF-8');
         $clean['message'] = preg_replace( '/\\r\\n|\\n|\\r/', '<br>', $clean['message']);
 	}
     
