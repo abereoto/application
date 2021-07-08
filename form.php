@@ -116,6 +116,14 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 		<label for="url_name">URL</label>
 		<input id="url_name" type="text" name="url_name" value="">
 	</div>
+	<table>
+	<div>
+		<label for="minus"></label>
+		<button type="button" name="minus">－</button>
+		<label for="puls"></label>
+		<button type="button" name="puls">＋</button>
+	</div>
+	</table>
 	<div>
 		<label for="message">ひと言メッセージ</label>
 		<textarea id="message" name="message"></textarea>
