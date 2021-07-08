@@ -14,6 +14,7 @@ $youtube_url = null;
 $message = array();
 $message_array = array();
 $error_message = array();
+$clean = array();
 
 
 if(isset($_REQUEST["url_name"]) == true)
@@ -38,16 +39,31 @@ if(isset($_REQUEST["url_name"]) == true)
 
 if(!empty($_POST['btn_submit'])){
     //表示名の入力チェック
+    if( empty($_POST['list_name']) ) {
+		$error_message[] = 'プレイリスト名を入れてください。';
+	}else {
+		$clean['list_name'] = htmlspecialchars( $_POST['list_name'], ENT_QUOTES, 'UTF-8');
+        $clean['list_name'] = preg_replace( '/\\r\\n|\\n|\\r/', '', $clean['list_name']);
+	}
+
     if( empty($_POST['view_name']) ) {
 		$error_message[] = '投稿者名を入れてください。';
+	}else {
+		$clean['view_name'] = htmlspecialchars( $_POST['view_name'], ENT_QUOTES, 'UTF-8');
+        $clean['view_name'] = preg_replace( '/\\r\\n|\\n|\\r/', '', $clean['view_name']);
 	}
 
     if( empty($_POST['message']) ) {
 		$error_message[] = 'メッセージを入れてください。';
+	}else {
+		$clean['message'] = htmlspecialchars( $_POST['message'], ENT_QUOTES, 'UTF-8');
+        $clean['message'] = preg_replace( '/\\r\\n|\\n|\\r/', '<br>', $clean['message']);
 	}
     
     if( empty($_POST['url_name']) ) {
 		$error_message[] = 'URLを入れてください。';
+	}else {
+		$clean['url_name'] = htmlspecialchars( $_POST['url_name'], ENT_QUOTES, 'UTF-8');
 	}
 
     if(empty($error_message)){
@@ -55,7 +71,7 @@ if(!empty($_POST['btn_submit'])){
         //書き込み日時を取得
         $current_date = date("Y-m-d H:i:s");
         //書き込むデータを作成
-        $data = "'".$_POST['list_name']."','".$_POST['view_name']."','".$youtube_url."','".$_POST['message']."','".$current_date."'\n";
+        $data = "'".$clean['list_name']."','".$clean['view_name']."','".$youtube_url."','".$clean['message']."','".$current_date."'\n";
         //書き込み
         fwrite( $file_handle, $data);
 
