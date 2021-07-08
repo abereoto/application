@@ -133,16 +133,33 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	<table>
 	<div>
 		<label for="minus"></label>
-		<button type="button" name="minus">－</button>
+		<button id="btnp" type="button" name="minus">－</button>
 		<label for="puls"></label>
-		<button type="button" name="puls">＋</button>
+		<button id="btnp" type="button" name="puls">＋</button>
 	</div>
 	</table>
 	<div>
 		<label for="message">ひと言メッセージ</label>
 		<textarea id="message" name="message"></textarea>
 	</div>
-	<input type="submit" name="btn_submit" value="投稿">
+	    
+<style>
+  #btnen {
+      font-size: 20px;
+      padding: 2px 30px;
+      background-color:#0086AD;
+      border-style: none;
+      color:#000;
+    }
+
+  #btnp{
+    width: 25px;
+    height: 25px;
+    background: #0086AD;
+    border-radius: 100%;
+  }
+</style>
+	<input id="btnen" type="submit" name="btn_submit" value="投稿">
 </form>
 <hr>
 <section>
