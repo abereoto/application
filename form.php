@@ -150,6 +150,7 @@ if( $file_handle = fopen( FILENAME,'r') ) {
             </iframe -->
         </div>
         <p><?php echo $value['message']; ?></p>
+	    <hr>
     </article>
     <?php endforeach; ?>
     <?php endif; ?>
