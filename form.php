@@ -146,20 +146,31 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 		<label for="view_name">投稿者名</label>
 		<input id="view_name" type="text" name="view_name" value="">
 	</div>
-    <div>
+	    
+    	<div>
 		<label for="url_name">URL</label>
-	<ul class="addInput">
-		<li><input id="url_name" type="text" name="url_name" value=""></li>
-        </ul>
-	</div>
-	<table>
+	    
 	<div>
 		<label for="minus"></label>
 		<a class="del" name="minus">－</a>
 		<label for="puls"></label>
 		<a class="add" name="puls">＋</a>
 	</div>
-	</table>
+	    
+	
+	</div>
+	
+	<div>
+		<label for="minus"></label>
+		<a class="del" name="minus">－</a>
+		<label for="puls"></label>
+		<a class="add" name="puls">＋</a>
+	</div>
+	    
+	    <ul class="addInput">
+		<li><input id="url_name" type="text" name="url_name" value=""></li>
+        </ul>
+	    
 	<div>
 		<label for="message">ひと言メッセージ</label>
 		<textarea id="message" name="message"></textarea>
