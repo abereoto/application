@@ -240,12 +240,26 @@ if( $file_handle = fopen( FILENAME,'r') ) {
         <div class="YouTube">
             <iframe 
             width="560" height="315" 
-            src="https://www.youtube.com/embed/<?php echo $value['url_name'];?>"
+            src=https://www.youtube.com/embed/<?php echo $value['url_name'];?>
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe -->
-        </div>
+	    
+	<?php
+	//プレイリスト
+	//nextボタンが押された時の処理
+	if(isset($_POST['nextBtn'])){
+	
+	}
+	//previousボタンが押された時の処理
+	else if(isset($_POST['previousBtn'])){
+
+	}
+	?>
+		
+	</div>
+	    
         <p><?php echo $value['message']; ?></p>
 	    <hr>
     </article>
