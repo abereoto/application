@@ -11,6 +11,7 @@ body{
 		background-position: center center;
 		font-family: Meiryo;
 		background-repeat: no-repeat;
+		background-attachment: fixed;
 
 	}
 	/* keijiban.txtの中身を書き出しているタグが p */
