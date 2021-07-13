@@ -260,6 +260,11 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 		
 	</div>
 	    
+	<div>
+	<button id="previousBtn" name="previousBtn">Previous</button>  
+        <button id="nextBtn" name="nextBtn">Next</button>
+	</div>
+	    
         <p><?php echo $value['message']; ?></p>
 	    <hr>
     </article>
