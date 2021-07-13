@@ -146,7 +146,9 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	</div>
     <div>
 		<label for="url_name">URL</label>
-		<input id="url_name" type="text" name="url_name" value="">
+	<ul class="addInput">
+		<li><input id="url_name" type="text" name="url_name" value=""></li>
+        </ul>
 	</div>
 	<table>
 	<div>
