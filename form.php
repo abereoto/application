@@ -131,6 +131,8 @@ if( $file_handle = fopen( FILENAME,'r') ) {
         <header>
         </header>
 	    <h1>YouTubeプレイリスト掲示板</h1>
+	    
+	    <a href="home.php" class="home">HOME</a>
 
             <div class="box1">
               <p>プレイリスト作成＆投稿</p>
@@ -164,6 +166,21 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	</div>
 	    
 <style>
+  .home{
+      font-size: 20px;
+      padding: 2px 20px;
+      background-color:#0086AD;
+      border-style: none;
+      border-radius: 3px;
+      color:#000;
+      text-decoration: none;
+    }
+
+  .home:hover{
+      color: white;
+      border-bottom: none;
+    }
+	
   #btnen {
       font-size: 20px;
       padding: 2px 30px;
@@ -171,26 +188,35 @@ if( $file_handle = fopen( FILENAME,'r') ) {
       border-style: none;
       color:#000;
     }
+	
+  #btnen:hover{
+    color: white;
+  }
 
   #btnp{
     width: 25px;
     height: 25px;
     background: #0086AD;
     border-radius: 100%;
+    border-style: none;
+    box-shadow: 1.5px 0 ;
 	  
 #view_name{
     border-color: #94D6DA;
     border-radius: 10%;
+    border-style: solid;
   }
 
   #url_name{
     border-color: #94D6DA;
     border-radius: 10%;
+    border-style: solid;
   }
 
   #list_name{
     border-color: #94D6DA;
     border-radius: 10%;
+    border-style: solid;
   }
 
   #message{
