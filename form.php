@@ -101,6 +101,24 @@ if( $file_handle = fopen( FILENAME,'r') ) {
     <head>
         <meta charset="utf-8">
 	<link href="CSS/style.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	    <script type="text/javascript">
+	    $(function(){
+		var size = $('li').length;
+		alert(size);
+		//「+」を押したら増やす
+		$('.add').click(function(){
+		    $('.addInput').append('<li><input id="url_name" type="text" name="url_name[]" value=""></li>');
+		});
+		//「-」を押したら減らす
+		$('.del').click(function(){
+		    size = $('li').length
+		    if(size > 1){
+			$('.addInput li:last-child').remove();
+		   }
+		});
+	    });
+	    </script>
     </head>
     <body>
     <?php if( !empty($error_message) ): ?>
@@ -133,9 +151,9 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	<table>
 	<div>
 		<label for="minus"></label>
-		<button id="btnp" type="button" name="minus">－</button>
+		<a class="del" name="minus">－</a>
 		<label for="puls"></label>
-		<button id="btnp" type="button" name="puls">＋</button>
+		<a class="add" name="puls">＋</a>
 	</div>
 	</table>
 	<div>
