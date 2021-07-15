@@ -177,10 +177,15 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	</div>
 	    
 <style>
+	
+  li{
+    list-style: none;
+  }
+	
   .home{
       font-size: 20px;
       padding: 2px 20px;
-      background-color:#0086AD;
+      background-color:#0099ff;
       border-style: none;
       border-radius: 3px;
       color:#000;
@@ -195,7 +200,7 @@ if( $file_handle = fopen( FILENAME,'r') ) {
   #btnen {
       font-size: 20px;
       padding: 2px 30px;
-      background-color:#0086AD;
+      background-color:#0099ff;
       border-style: none;
       color:#000;
     }
@@ -203,14 +208,24 @@ if( $file_handle = fopen( FILENAME,'r') ) {
   #btnen:hover{
     color: white;
   }
-
-  #btnp{
+	
+  .del {
     width: 25px;
     height: 25px;
-    background: #0086AD;
+    background: #0099FF;
     border-radius: 100%;
     border-style: none;
     box-shadow: 1.5px 0 ;
+  }
+
+  .add {
+    width: 25px;
+    height: 25px;
+    background: #0099FF;
+    border-radius: 100%;
+    border-style: none;
+    box-shadow: 1.5px 0 ;
+  }
 	  
 #view_name{
     border-color: #94D6DA;
@@ -272,9 +287,35 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	</div>
 	    
 	<div>
-	<button id="previousBtn" name="previousBtn">Previous</button>  
-        <button id="nextBtn" name="nextBtn">Next</button>
+	<button id="previousBtn" name="previousBtn"><span>戻る</span></button>  
+        <button id="nextBtn" name="nextBtn"><span>次へ</span></button>
 	</div>
+	    
+	    
+<style>
+  #previousBtn,
+  #nextBtn {
+    position: relative;
+    display: inline-block;
+    padding: 3px 10px;
+    border: 2px solid #e41313;
+    background: #fff;
+    border-radius: 2px;
+    color: #e41313;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+  #previousBtn,
+  #nextBtn span{
+    text-align: center;
+  }
+
+
+  </style>
+
 	    
         <p><?php echo $value['message']; ?></p>
 	    <hr>
