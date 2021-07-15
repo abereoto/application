@@ -203,6 +203,7 @@ if( $file_handle = fopen( FILENAME,'r') ) {
       background-color:#0099ff;
       border-style: none;
       color:#000;
+      margin-left: 91%;
     }
 	
   #btnen:hover{
