@@ -313,9 +313,23 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 
 }
 
-  #previousBtn,
+  #previousBtn span{
+    text-align: center;
+    opacity: 0.3
+  }
+
   #nextBtn span{
     text-align: center;
+    opacity: 0.3
+  }
+
+  #previousBtn span:hover{
+    opacity: 1.0;
+  }
+
+
+  #nextBtn span:hover{
+    opacity: 1.0;
   }
 
 
