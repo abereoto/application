@@ -226,6 +226,11 @@ if( $file_handle = fopen( FILENAME,'r') ) {
     border-style: none;
     box-shadow: 1.5px 0 ;
   }
+	
+  .del:hover,
+  .add:hover{
+    color: #fff;
+  }
 	  
 #view_name{
     border-color: #94D6DA;
