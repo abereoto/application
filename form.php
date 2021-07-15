@@ -299,6 +299,18 @@ if( $file_handle = fopen( FILENAME,'r') ) {
 	    
 	    
 <style>
+	
+  .YouTube{
+    float: left;
+    height: 20px;
+  }
+
+  .info{
+    height: 20px;
+    margin-left: 50%;
+
+  }
+	
   #previousBtn,
   #nextBtn {
     position: relative;
@@ -311,6 +323,9 @@ if( $file_handle = fopen( FILENAME,'r') ) {
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
+    height: auto;
+    margin-top: 15%;
+    margin-right: 5%;
 
 }
 
