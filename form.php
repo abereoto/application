@@ -101,7 +101,7 @@ if( $file_handle = fopen( FILENAME,'r') ) {
     <head>
         <meta charset="utf-8">
 	<link href="CSS/style.css" rel="stylesheet">
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	    <script type="text/javascript">
 	    $(function(){
 		var size = $('li').length;
